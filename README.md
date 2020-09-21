@@ -1,4 +1,4 @@
-# vuejobportal
+# Noroff_VueApp
 
 ## Project setup
 ```
