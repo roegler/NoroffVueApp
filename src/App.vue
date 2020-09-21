@@ -1,21 +1,35 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <RecepieItem/>
-    <RecepieItem/>
-    <RecepieItem/>
+    <div v-for="item in recepies" :key="item.title">
+      <RecepieItem :item="item"/> 
+    </div>
   </div>
 </template>
 
 <script>
-import RecepieItem from './components/RecepieItem.vue'
+import RecepieItem from "./components/RecepieItem.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    RecepieItem
-  }
-}
+    RecepieItem,
+  },
+  data() {
+    return {
+      recepies: [],
+    };
+  },
+
+  mounted() {
+    const apiUrl =
+      "https://cors-anywhere.herokuapp.com/http://www.recipepuppy.com/api/";
+    this.$http.get(apiUrl).then((response) => {
+      const recepies = response.data.results;
+      console.log(recepies);
+      this.recepies = recepies;
+    });
+  },
+};
 </script>
 
 <style>

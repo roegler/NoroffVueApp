@@ -1,7 +1,16 @@
 <template>
     <div>
-        <h1>Title</h1>
-        <p> Ingridiense: Ingridiense 1, Ingridiense 2, Ingridiense 3 </p>
-        <img src="#" alt=""/>
+        <h1>{{ item.title }}</h1>
+        <p><b>Ingredients:</b> {{ item.ingredients }}</p>
+        <img :src="item.thumbnail" height="300"/>
     </div>
 </template>
+
+<script>
+export default {
+    name: 'RecepieItem',
+    props: {
+       item: Object 
+    }
+}
+</script>
