@@ -1,5 +1,15 @@
 # Noroff_VueApp
 
+## Dependencies
+```
+install node on your machine
+https://nodejs.org/en/download/
+
+install npm on your machine
+https://www.npmjs.com/get-npm
+
+```
+
 ## Project setup
 ```
 npm install
