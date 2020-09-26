@@ -16,7 +16,5 @@ export default {
     color: cornsilk;
     border: none;
 }
-
-
 </style>
     
